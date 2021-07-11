@@ -4,10 +4,11 @@ module.exports = {
     key_path: `${__dirname}/lib/http2/privkey.pem`,
     cert_path: `${__dirname}/lib/http2/cert.pem`,
     hostname: 'localhost',
+    port: 443,
     port_dev: 3443,
     port_live_reload: 3403,
     server_timeout: 10000,
-    header_mapping: {
+    headers_mapping: {
       method: ':method',
       hostname: ':authority',
       path: ':path',

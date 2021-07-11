@@ -1,7 +1,7 @@
 {
   "name": "poutlet",
   "description": "Plugin outlet",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "main": "poutlet.js",
   "files": [
     "poutlet.js",
