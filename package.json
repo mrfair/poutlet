@@ -1,7 +1,7 @@
 {
   "name": "poutlet",
   "description": "Plugin outlet",
-  "version": "1.0.13",
+  "version": "1.0.14",
   "main": "poutlet.js",
   "files": [
     "poutlet.js",
@@ -20,12 +20,14 @@
     "busboy": "^0.3.1",
     "concurrently": "^6.0.0",
     "crypto-js": "^4.0.0",
+    "etag": "^1.8.1",
     "fs-path": "^0.0.25",
     "lzutf8": "^0.6.0",
     "mime-types": "^2.1.29",
     "moment": "^2.29.1",
     "mongodb": "^3.6.5",
     "open": "^8.2.1",
+    "sass": "^1.35.2",
     "websocket": "^1.0.34"
   }
 }
