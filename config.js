@@ -14,7 +14,13 @@ module.exports = {
       hostname: ':authority',
       path: ':path',
       cookie: 'cookie',
-      referer: 'referer'
-    }
+      referer: 'referer',
+      scheme: ':scheme',
+      origin: 'origin'
+    },
+    access_control_allow_origin_dev: [
+      'https://localhost:3443',
+      'https://localhost:3401'
+    ]
   }
 }
