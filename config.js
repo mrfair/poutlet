@@ -21,6 +21,42 @@ module.exports = {
     access_control_allow_origin_dev: [
       'https://localhost:3443',
       'https://localhost:3401'
-    ]
+    ],
+    response_html: {
+      static: [
+        {
+          link: "https://cdn.jsdelivr.net/npm/lzutf8/build/production/lzutf8.min.js",
+          as: "script",
+          defer: true,
+        },
+        {
+          link: "https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js",
+          as: "script",
+          defer: true,
+          integrity:
+            "sha512-nOQuvD9nKirvxDdvQ9OMqe2dgapbPB7vYAMrzJihw5m+aNcf0dX53m6YxM4LgA9u8e9eg9QX+/+mPu8kCNpV2A==",
+          crossorigin: "anonymous",
+          referrerpolicy: "no-referrer"
+        },
+        {
+          link: "https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/aes.min.js",
+          as: "script",
+          defer: true,
+          integrity:
+            "sha512-eqbQu9UN8zs1GXYopZmnTFFtJxpZ03FHaBMoU3dwoKirgGRss9diYqVpecUgtqW2YRFkIVgkycGQV852cD46+w==",
+          crossorigin: "anonymous",
+          referrerpolicy: "no-referrer"
+        },
+        {
+          link: "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css",
+          as: "style",
+          defer: true,
+          integrity:
+            "sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==",
+          crossorigin: "anonymous",
+          referrerpolicy: "no-referrer"
+        },
+      ]
+    }
   }
 }
