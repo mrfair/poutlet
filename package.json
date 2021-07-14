@@ -29,5 +29,8 @@
     "open": "^8.2.1",
     "sass": "^1.35.2",
     "websocket": "^1.0.34"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
   }
 }

@@ -1,20 +1,20 @@
-var http2 = require('./lib/http2/http2.js');
-var live_reload = require('./lib/live_reload/live_reload.js');
-var install = require('./lib/install/install.js'); 
-var http = require('./lib/http/http.js');
-var route_ui = require('./lib/route_ui/route_ui.js');
+var path = require('path');
+var nodemon = require('nodemon');
 
-module.exports = {
-  config: require('./config.js'),
-  start: function() {
-    install();
-
-    http2(this.config.http2);
-    
-    http(this.config.http2);
-
-    route_ui(this.config.http2);
-
-    live_reload(this.config.http2); 
-  }
-}
+module.exports = function() {
+  nodemon({
+    script: __dirname + '/start.js',
+    ext: 'js json html',
+    watch: [__dirname , path.resolve('poutlet_static'), path.resolve('poutlet_root'), path.resolve('poutlet_plugin'), ],
+    ignoreRoot: [".git", __dirname+'/node_modules']
+  });
+  
+  nodemon.on('start', function () {
+    console.log('App has started');
+  }).on('quit', function () {
+    console.log('App has quit');
+    process.exit();
+  }).on('restart', function (files) {
+    console.log('App restarted due to: ', files);
+  });
+};
