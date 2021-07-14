@@ -1,7 +1,11 @@
 var path = require('path');
 var nodemon = require('nodemon');
+var install = require('./lib/install/install.js'); 
 
-module.exports = function() {
+module.exports = async function() {
+  
+  await install();
+
   nodemon({
     script: __dirname + '/start.js',
     ext: 'js json html',
