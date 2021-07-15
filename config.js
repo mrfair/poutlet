@@ -1,9 +1,12 @@
 module.exports = {
   //
   http2: {
-    key_path: `${__dirname}/lib/http2/privkey.pem`,
-    cert_path: `${__dirname}/lib/http2/cert.pem`,
-    hostname: 'localhost',
+    key_path: fs.readFileSync('/etc/letsencrypt/live/{hostname}/privkey.pem'),
+    cert_path: fs.readFileSync('/etc/letsencrypt/live/{hostname}/fullchain.pem'),
+    key_path_dev: `${__dirname}/lib/http2/privkey.pem`,
+    cert_path_dev: `${__dirname}/lib/http2/cert.pem`,
+    hostname: '{hostname}',
+    hostname_dev: 'localhost',
     port: 443,
     port_dev: 3443,
     port_live_reload: 3403,
@@ -18,6 +21,7 @@ module.exports = {
       scheme: ':scheme',
       origin: 'origin'
     },
+    access_control_allow_origin: [],
     access_control_allow_origin_dev: [
       'https://localhost:3443',
       'https://localhost:3401'
