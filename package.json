@@ -1,14 +1,13 @@
 {
   "name": "poutlet",
   "description": "Plugin outlet",
-  "version": "1.0.22",
+  "version": "1.0.23",
   "main": "poutlet.js",
   "files": [
     "poutlet.js",
     "lib"
   ],
   "scripts": {
-    "test": "jest"
   },
   "keywords": [
     "poutlet"

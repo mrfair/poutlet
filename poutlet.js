@@ -9,8 +9,8 @@ module.exports = async function() {
   nodemon({
     script: __dirname + '/start.js',
     ext: 'js json html',
-    watch: [__dirname , path.resolve('poutlet_static'), path.resolve('poutlet_root'), path.resolve('poutlet_plugin'), ],
-    ignoreRoot: [".git", __dirname+'/node_modules']
+    watch: [__dirname , path.resolve('poutlet_static'), path.resolve('poutlet_root'), path.resolve('poutlet_plugin') ],
+    ignoreRoot: [".git", __dirname+'/node_modules', __dirname+'/poutlet']
   });
   
   nodemon.on('start', function () {
@@ -21,4 +21,5 @@ module.exports = async function() {
   }).on('restart', function (files) {
     console.log('App restarted due to: ', files);
   });
+  
 };
