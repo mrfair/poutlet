@@ -1,8 +1,13 @@
 module.exports = {
+  build: {
+    dependencies: {
+    }
+  },
   //
   http2: {
-    key_path: fs.readFileSync('/etc/letsencrypt/live/{hostname}/privkey.pem'),
-    cert_path: fs.readFileSync('/etc/letsencrypt/live/{hostname}/fullchain.pem'),
+    version: '1.0.0',
+    key_path:  '/etc/letsencrypt/live/{hostname}/privkey.pem',
+    cert_path: '/etc/letsencrypt/live/{hostname}/fullchain.pem',
     key_path_dev: `${__dirname}/lib/http2/privkey.pem`,
     cert_path_dev: `${__dirname}/lib/http2/cert.pem`,
     hostname: '{hostname}',
