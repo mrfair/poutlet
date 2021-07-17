@@ -6,8 +6,8 @@ module.exports = {
   //
   http2: {
     version: '1.0.0',
-    key_path:  '/etc/letsencrypt/live/{hostname}/privkey.pem',
-    cert_path: '/etc/letsencrypt/live/{hostname}/fullchain.pem',
+    key_path:  './cert/{hostname}/privkey.pem',
+    cert_path: './cert/{hostname}/cert.pem',
     key_path_dev: `${__dirname}/lib/http2/privkey.pem`,
     cert_path_dev: `${__dirname}/lib/http2/cert.pem`,
     hostname: '{hostname}',
@@ -17,6 +17,7 @@ module.exports = {
     port_live_reload: 3403,
     port_ui_api: 3401,
     server_timeout: 10000,
+    lang: 'en',
     headers_mapping: {
       method: ':method',
       hostname: ':authority',
