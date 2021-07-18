@@ -7,7 +7,7 @@ module.exports = async function() {
 
   nodemon({
     script: __dirname + '/nodemon_start.js',
-    ext: 'js json html',
+    ext: 'js json html htm jpg jpeg webp png svg ico scss',
     watch: [__dirname , path.resolve('poutlet_static'), path.resolve('poutlet_root'), path.resolve('poutlet_plugin') ],
     ignoreRoot: [".git", __dirname+'/node_modules', __dirname+'/poutlet']
   });
