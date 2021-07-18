@@ -1,8 +1,4 @@
 module.exports = {
-  build: {
-    dependencies: {
-    }
-  },
   //
   http2: {
     version: '1.0.0',
