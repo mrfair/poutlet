@@ -8,7 +8,7 @@ var sass_watch = require('./lib/sass/sass_watch.js');
 (async function() {
   http2(config.http2);
 
-  http(config.http2);
+  //http(config.http2);
   
   route_ui(config.http2);
 
